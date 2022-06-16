@@ -10,6 +10,7 @@ Custom django admin.
 - > py -m pip install --upgrade pip
 - > py -m pip install django
 - > py -m pip freeze > requirements.txt
+- > py -m pip install -r requirements.txt
 
 - > django-admin startproject qp .
 
