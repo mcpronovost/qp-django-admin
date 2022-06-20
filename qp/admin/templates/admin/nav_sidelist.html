@@ -1,0 +1,30 @@
+{% load i18n %}
+
+{% if app_list %}
+  {% for app in app_list %}
+    <ul class="app-{{ app.app_label }}">
+      <li class="qp-navside-app{% if app.app_url in request.path|urlencode %} qp-current{% endif %}">
+        <a href="{{ app.app_url }}">
+            <span>{{ app.name }}</span>
+        </a>
+        <ul>
+            {% for model in app.models %}
+                {% if model.admin_url %}
+                    <li class="qp-navside-model{% if model.admin_url in request.path|urlencode %} qp-current{% endif %}">
+                        <a href="{{ model.admin_url }}">
+                            <span>{{ model.name }}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <span>{{ model.name }}</span>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  {% endfor %}
+{% else %}
+  <p>{% translate 'You don’t have permission to view or edit anything.' %}</p>
+{% endif %}

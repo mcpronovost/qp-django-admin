@@ -1,0 +1,257 @@
+:root {
+    --qp-light: #c9c8cd;
+    --qp-dark: #313134;
+    --qp-darken: #1e1e20;
+    --qp-text: #333;
+    --qp-link: #333;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--qp-light);
+    color: var(--qp-text);
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+/* LINKS */
+
+a:link,
+a:visited {
+    color: var(--qp-link);
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+}
+
+a:focus,
+a:hover {
+    color: var(--qp-link);
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+a.section:link,
+a.section:visited {
+    color: var(--qp-link);
+    text-decoration: none;
+}
+
+a.section:focus,
+a.section:hover {
+    text-decoration: underline;
+}
+
+/* PAGE STRUCTURE */
+
+#container {
+    position: relative;
+    width: 100%;
+    min-width: 980px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#container > div {
+    flex-shrink: 0;
+}
+
+#container > .main {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.main > .content {
+    flex:  1 0;
+    max-width: 100%;
+}
+
+#content {
+    padding: 20px 40px;
+}
+
+.dashboard #content {
+    width: 600px;
+}
+
+#content-main {
+    float: left;
+    width: 100%;
+}
+
+#content-related {
+    float: right;
+    width: 260px;
+    position: relative;
+    margin-right: -300px;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+}
+
+.content > .breadcrumbs {
+    padding: 12px 40px;
+}
+
+/* NAV_SIDEBAR */
+
+#toggle-nav-sidebar {
+    background-color: var(--qp-dark);
+    border-right: 1px solid var(--qp-darken);
+    color: var(--qp-light);
+}
+#nav-sidebar {
+    background-color: var(--qp-dark);
+    color: var(--qp-light);
+}
+#nav-sidebar a {
+    color: var(--qp-light);
+}
+#nav-sidebar a:hover {
+    color: #fff;
+}
+#nav-sidebar > ul,
+#nav-sidebar > ul ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#nav-sidebar > ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-sidebar .qp-navside-app {
+    padding: 0;
+    margin: 0 0 32px;
+}
+#nav-sidebar .qp-navside-model {
+    padding: 6px 0;
+    margin: 0;
+}
+
+#nav-sidebar a {
+    display: block;
+    padding: 6px 16px;
+}
+
+/* HEADER */
+
+#header {
+    background-color: var(--qp-dark);
+    color: var(--qp-light);
+    padding: 12px 40px;
+}
+#header a {
+    color: var(--qp-light);
+}
+
+/* RELATED */
+
+#content-related {
+    background: #f00;
+}
+
+#content-related .module {
+    background: none;
+}
+
+#content-related h3 {
+    color: var(--body-quiet-color);
+    padding: 0 16px;
+    margin: 0 0 16px;
+}
+
+#content-related h4 {
+    font-size: 13px;
+}
+
+#content-related p {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content-related .actionlist {
+    padding: 0;
+    margin: 16px;
+}
+
+#content-related .actionlist li {
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-left: 18px;
+}
+
+#content-related .module h2 {
+    background: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--hairline-color);
+    font-size: 18px;
+    color: var(--body-fg);
+}
+
+.delete-confirmation form input[type="submit"] {
+    background: var(--delete-button-bg);
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: var(--button-fg);
+}
+
+.delete-confirmation form input[type="submit"]:active,
+.delete-confirmation form input[type="submit"]:focus,
+.delete-confirmation form input[type="submit"]:hover {
+    background: var(--delete-button-hover-bg);
+}
+
+.delete-confirmation form .cancel-link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: var(--button-fg);
+    background: var(--close-button-bg);
+    margin: 0 0 0 10px;
+}
+
+.delete-confirmation form .cancel-link:active,
+.delete-confirmation form .cancel-link:focus,
+.delete-confirmation form .cancel-link:hover {
+    background: var(--close-button-hover-bg);
+}
+
+/* POPUP */
+.popup #content {
+    padding: 20px;
+}
+
+.popup #container {
+    min-width: 0;
+}
+
+.popup #header {
+    padding: 10px 20px;
+}
+
